@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gerador de Termo de Compromisso de Estágio - IFSP Sorocaba</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="topo">
+  <h1>Gerador de Termo de Compromisso e Plano de Atividades de Estágio</h1>
+  <p>Licenciaturas — IFSP Campus Sorocaba</p>
+</header>
+
+<main class="container">
+
+  <aside class="formulario">
+    <h2>Preenchimento obrigatório</h2>
+    <p class="aviso">Campos com * são obrigatórios. Use os formatos indicados.</p>
+
+    <fieldset>
+      <legend>Curso e orientação</legend>
+
+      <label>Licenciatura em *</label>
+      <input id="curso" required placeholder="Pedagogia" />
+
+      <label>Professor(a) orientador(a) no IFSP *</label>
+      <input id="orientador" required />
+
+      <label>E-mail do(a) orientador(a) *</label>
+      <input id="emailOrientador" required type="email" placeholder="nome@ifsp.edu.br" />
+    </fieldset>
+
+    <fieldset>
+      <legend>Unidade concedente</legend>
+
+      <label>Unidade de Ensino / Escola *</label>
+      <input id="unidade" required />
+
+      <label>CNPJ *</label>
+      <input id="cnpj" required placeholder="00.000.000/0000-00" maxlength="18" data-mask="cnpj" />
+
+      <label>Endereço *</label>
+      <input id="enderecoUnidade" required />
+
+      <label>CEP *</label>
+      <input id="cepUnidade" required placeholder="00000-000" maxlength="9" data-mask="cep" />
+
+      <label>Bairro *</label>
+      <input id="bairroUnidade" required />
+
+      <label>Cidade *</label>
+      <input id="cidadeUnidade" required />
+
+      <label>Estado *</label>
+      <input id="estadoUnidade" required value="SP" maxlength="2" />
+
+      <label>Representante legal *</label>
+      <input id="representante" required />
+
+      <label>Cargo do representante legal *</label>
+      <input id="cargoRepresentante" required />
+
+      <label>Telefone da unidade *</label>
+      <input id="telefoneUnidade" required placeholder="(15) 0000-0000" data-mask="telefone" />
+
+      <label>E-mail da unidade *</label>
+      <input id="emailUnidade" required type="email" />
+    </fieldset>
+
+    <fieldset>
+      <legend>Supervisor(a) da unidade concedente</legend>
+
+      <label>Nome *</label>
+      <input id="supervisor" required />
+
+      <label>Função *</label>
+      <input id="funcaoSupervisor" required />
+
+      <label>Telefone *</label>
+      <input id="telefoneSupervisor" required placeholder="(15) 0000-0000" data-mask="telefone" />
+
+      <label>E-mail *</label>
+      <input id="emailSupervisor" required type="email" />
+    </fieldset>
+
+    <fieldset>
+      <legend>Estudante / estagiário(a)</legend>
+
+      <label>Nome *</label>
+      <input id="nomeEstudante" required />
+
+      <label>Período do curso *</label>
+      <input id="periodoCurso" required placeholder="Matutino / Vespertino / Noturno" />
+
+      <label>Prontuário *</label>
+      <input id="prontuario" required placeholder="SO0000000" />
+
+      <label>RG *</label>
+      <input id="rg" required placeholder="00.000.000-0" maxlength="12" data-mask="rg" />
+
+      <label>CPF *</label>
+      <input id="cpf" required placeholder="000.000.000-00" maxlength="14" data-mask="cpf" />
+
+      <label>Data de nascimento *</label>
+      <input id="dataNascimento" required placeholder="dd/mm/aaaa" maxlength="10" data-mask="data" />
+
+      <label>Endereço *</label>
+      <input id="enderecoEstudante" required />
+
+      <label>CEP *</label>
+      <input id="cepEstudante" required placeholder="00000-000" maxlength="9" data-mask="cep" />
+
+      <label>Bairro *</label>
+      <input id="bairroEstudante" required />
+
+      <label>Cidade *</label>
+      <input id="cidadeEstudante" required />
+
+      <label>Estado *</label>
+      <input id="estadoEstudante" required maxlength="2" value="SP" />
+
+      <label>Celular *</label>
+      <input id="celularEstudante" required placeholder="(15) 90000-0000" data-mask="telefone" />
+
+      <label>E-mail *</label>
+      <input id="emailEstudante" required type="email" />
+    </fieldset>
+
+    <fieldset>
+      <legend>Características do estágio</legend>
+
+      <label>Tipo de estágio *</label>
+      <select id="tipoEstagio" required>
+        <option value="">Selecione</option>
+        <option value="Obrigatório">Obrigatório</option>
+        <option value="Não Obrigatório">Não Obrigatório</option>
+      </select>
+
+      <label>Pessoa com deficiência? *</label>
+      <select id="pcd" required>
+        <option value="">Selecione</option>
+        <option value="Não">Não</option>
+        <option value="Sim">Sim</option>
+      </select>
+
+      <label>Especificação da deficiência, se houver</label>
+      <input id="pcdEspecificar" />
+
+      <label>Data inicial do estágio *</label>
+      <input id="dataInicio" required placeholder="dd/mm/aaaa" maxlength="10" data-mask="data" />
+
+      <label>Data final do estágio *</label>
+      <input id="dataFim" required placeholder="dd/mm/aaaa" maxlength="10" data-mask="data" />
+
+      <label>Dias da semana *</label>
+      <input id="diasSemana" required placeholder="segundas e quartas-feiras" />
+
+      <label>Período do estágio *</label>
+      <select id="periodoEstagio" required>
+        <option value="">Selecione</option>
+        <option value="matutino">matutino</option>
+        <option value="vespertino">vespertino</option>
+        <option value="noturno">noturno</option>
+      </select>
+
+      <label>Horário de início *</label>
+      <input id="horaInicio" required placeholder="00:00" maxlength="5" data-mask="hora" />
+
+      <label>Horário de término *</label>
+      <input id="horaFim" required placeholder="00:00" maxlength="5" data-mask="hora" />
+    </fieldset>
+
+    <fieldset>
+      <legend>Data do documento</legend>
+
+      <label>Dia *</label>
+      <input id="diaDocumento" required placeholder="19" maxlength="2" />
+
+      <label>Mês por extenso *</label>
+      <input id="mesDocumento" required placeholder="março" />
+
+      <label>Ano *</label>
+      <input id="anoDocumento" required placeholder="2026" maxlength="4" />
+    </fieldset>
+
+    <fieldset>
+      <legend>Assinaturas adicionais</legend>
+
+      <label>Coordenador(a) do Curso *</label>
+      <input id="coordenadorCurso" required />
+
+      <label>Responsável pelo setor de Estágios no campus *</label>
+      <input id="responsavelEstagios" required />
+
+      <label>Coordenador(a) Institucional de Estágios *</label>
+      <input id="coordenadorInstitucional" required />
+    </fieldset>
+
+    <div id="mensagens" class="mensagens" aria-live="polite"></div>
+
+    <button onclick="gerarDocumento()">Gerar documento</button>
+    <button onclick="imprimirDocumento()">Imprimir / Salvar em PDF</button>
+    <button class="secundario" onclick="limparFormulario()">Limpar formulário</button>
+  </aside>
+
+  <section class="documento" id="documento">
+    <div class="cabecalho-documento">
+      <div class="brasao-placeholder">IFSP</div>
+      <p>Ministério da Educação</p>
+      <p>Instituto Federal de Educação, Ciência e Tecnologia de São Paulo</p>
+      <p>Campus Sorocaba</p>
+      <h2>TERMO DE COMPROMISSO E PLANO DE ATIVIDADES DE ESTÁGIO – LICENCIATURA EM <span data-out="curso">[preencher]</span></h2>
+    </div>
+
+    <h3>INSTITUIÇÃO DE ENSINO</h3>
+    <p><strong>Instituição:</strong> Instituto Federal de Educação, Ciência e Tecnologia de São Paulo, Campus Sorocaba</p>
+    <p><strong>Endereço:</strong> Rodovia Raposo Tavares, SN, Parque Reserva Fazenda Imperial, SOROCABA / SP, CEP 18052-775</p>
+    <p><strong>CNPJ:</strong> 10.882.594/0032-61</p>
+    <p><strong>Representada pelo(a) seu(ua) Diretor(a)-Geral, Prof.(ª) Denilson de Camargo Mirim, nomeado(a) pela Portaria nº 1.478, publicada no Diário Oficial da União de 09 de abril de 2025.</strong></p>
+
+    <h3>IDENTIFICAÇÃO DO(A) PROFESSOR(A) ORIENTADOR(A) no IFSP</h3>
+    <p><strong>Nome:</strong> <span data-out="orientador">[preencher]</span> &nbsp;&nbsp; <strong>E-mail:</strong> <span data-out="emailOrientador">[preencher]</span></p>
+
+    <h3>UNIDADE CONCEDENTE</h3>
+    <p><strong>Unidade de Ensino:</strong> <span data-out="unidade">[preencher com o nome da escola]</span></p>
+    <p><strong>CNPJ:</strong> <span data-out="cnpj">[preencher]</span> (doravante denominada CONCEDENTE)</p>
+    <p><strong>Endereço:</strong> <span data-out="enderecoUnidade">[preencher]</span></p>
+    <p><strong>CEP:</strong> <span data-out="cepUnidade">[preencher]</span> &nbsp; <strong>Bairro:</strong> <span data-out="bairroUnidade">[preencher]</span> &nbsp; <strong>Cidade:</strong> <span data-out="cidadeUnidade">[preencher]</span> &nbsp; <strong>Estado:</strong> <span data-out="estadoUnidade">SP</span></p>
+    <p><strong>Representante legal:</strong> <span data-out="representante">[preencher]</span> &nbsp; <strong>Cargo:</strong> <span data-out="cargoRepresentante">[preencher]</span></p>
+    <p><strong>Telefone:</strong> <span data-out="telefoneUnidade">[preencher]</span> &nbsp; <strong>E-mail:</strong> <span data-out="emailUnidade">[preencher]</span></p>
+
+    <h3>INFORMAÇÕES DA SUPERVISORA/SUPERVISOR (da unidade concedente)</h3>
+    <p><strong>Nome:</strong> <span data-out="supervisor">[preencher]</span> &nbsp; <strong>Função:</strong> <span data-out="funcaoSupervisor">[preencher]</span></p>
+    <p><strong>Telefone:</strong> <span data-out="telefoneSupervisor">[preencher]</span> &nbsp; <strong>E-mail:</strong> <span data-out="emailSupervisor">[preencher]</span></p>
+
+    <p>Acordam entre si o Termo de Convênio de Concessão de Estágio conforme declaram nas cláusulas a seguir:</p>
+
+    <p><strong>CLÁUSULA I</strong> - As Condições Gerais do Termo de Convênio formalizam a realização de estágios de estudantes do Curso de Licenciatura em <span data-out="curso">[preencher]</span> do Instituto Federal de Educação, Ciência e Tecnologia de São Paulo. O Estágio Supervisionado de Ensino faz parte do Projeto Pedagógico do Curso da Instituição de Ensino qualificada e que indicará Professor Orientador responsável pelo acompanhamento e avaliação das atividades do estagiário. De acordo com o artigo 1º da Lei 11.788/2008, além de integrar o itinerário formativo do estudante, o estágio visa o aprendizado de competências próprias da atividade profissional, contextualização curricular e desenvolvimento para a vida cidadã e para o trabalho.</p>
+
+    <p><strong>CLÁUSULA II</strong> - Atrelado a essas condições, celebra-se um TERMO DE COMPROMISSO DE ESTÁGIO entre o estudante/estagiário, a Unidade Concedente e a Instituição de Ensino conforme artigo 3º da Lei 11.788/2008, o qual se constituirá como comprovante da inexistência de vínculo empregatício entre o estudante/estagiário e a Unidade Concedente.</p>
+
+    <h3>ESTUDANTE/ESTAGIÁRIO</h3>
+    <p><strong>Nome:</strong> <span data-out="nomeEstudante">[preencher]</span></p>
+    <p><strong>Curso:</strong> Licenciatura em <span data-out="curso">[preencher]</span> &nbsp; <strong>Período:</strong> <span data-out="periodoCurso">[preencher]</span> &nbsp; <strong>Prontuário:</strong> <span data-out="prontuario">[preencher]</span></p>
+    <p><strong>RG:</strong> <span data-out="rg">[preencher]</span> &nbsp; <strong>CPF:</strong> <span data-out="cpf">[preencher]</span> &nbsp; <strong>Data de Nascimento:</strong> <span data-out="dataNascimento">[preencher]</span></p>
+    <p><strong>Endereço:</strong> <span data-out="enderecoEstudante">[preencher]</span></p>
+    <p><strong>CEP:</strong> <span data-out="cepEstudante">[preencher]</span> &nbsp; <strong>Bairro:</strong> <span data-out="bairroEstudante">[preencher]</span> &nbsp; <strong>Cidade:</strong> <span data-out="cidadeEstudante">[preencher]</span> &nbsp; <strong>Estado:</strong> <span data-out="estadoEstudante">[preencher]</span></p>
+    <p><strong>Celular:</strong> <span data-out="celularEstudante">[preencher]</span> &nbsp; <strong>E-mail:</strong> <span data-out="emailEstudante">[preencher]</span></p>
+    <p><strong>Estágio:</strong> <span data-out="tipoEstagioMarcado">[X] Obrigatório [ ] Não Obrigatório</span></p>
+    <p><strong>Pessoa com deficiência:</strong> <span data-out="pcdMarcado">[ ] Sim [ ] Não</span> <span data-out="pcdEspecificar"></span></p>
+
+    <p>A UNIDADE CONCEDENTE, com a intervenção da INSTITUIÇÃO DE ENSINO e, de outro lado, o ESTUDANTE/ESTAGIÁRIO abaixo:</p>
+    <p>Ajustam entre si este TERMO DE COMPROMISSO DE ESTÁGIO que se regerá pelas cláusulas a seguir:</p>
+
+    <p><strong>CLÁUSULA III</strong> - O presente Termo de Compromisso de Estágio visa assegurar a complementação da aprendizagem por meio de formação prática, integração social e desenvolvimento pessoal do estagiário, não caracterizando vínculo empregatício de qualquer espécie com a unidade concedente.</p>
+
+    <p><strong>CLÁUSULA IV</strong> - Consideram-se estágio curricular as atividades de Aprendizagem Profissional, Cultural e Social, proporcionadas ao estudante pela participação em situações reais de trabalho dentro de sua área de habilitação, obrigando-o a cumprir fielmente a programação de estágio. As atividades principais a serem desenvolvidas pelo estudante/estagiário, compatíveis com o contexto básico da profissão a qual o curso se refere, estão definidas no Projeto Pedagógico do Curso e no Manual de Estágio do Curso de Licenciatura em Pedagogia.</p>
+
+    <p><strong>CLÁUSULA V</strong> - O acompanhamento do estágio será realizado pelo(a) Professor(a) Supervisor(a) que atua na Unidade Concedente de estágio, e pelo Professor Orientador do Estágio no IFSP.</p>
+
+    <p><strong>CLÁUSULA VI</strong> - À Instituição de Ensino caberá a fixação dos locais, datas, e horário em que serão realizadas as atividades competentes da programação de estágio e que não coincidam com os programas de ensino em que o estudante/estagiário estuda.</p>
+
+    <p><strong>CLÁUSULA VII</strong> - O estágio será desenvolvido no período de <span data-out="dataInicio">[dd/mm/aaaa]</span> a <span data-out="dataFim">[dd/mm/aaaa]</span>, às <span data-out="diasSemana">[dia da semana]</span>, no período <span data-out="periodoEstagio">[matutino] [vespertino] [noturno]</span> das <span data-out="horaInicio">[00:00]</span> às <span data-out="horaFim">[00:00]</span>, podendo ser prorrogado por meio de Termo Aditivo. Ressaltam-se aqui os limites para jornada de estágio, estabelecidos no artigo 10º da Lei 11.788/2008, que não deve ultrapassar 6 (seis) horas diárias e 30 (trinta) horas semanais. A jornada de estágio na Unidade Concedente também não poderá coincidir com os horários de aulas do estudante/estagiário no curso de Licenciatura.</p>
+
+    <p><strong>CLÁUSULA VIII</strong> - Durante a realização do estágio, o(a) ESTAGIÁRIO(A) estará coberto(a) pela apólice de seguro nº 05.820.57475.1, da Seguradora MBM Seguradora S.A., no valor de R$ 10.000,00 (dez mil reais), contra Acidentes Pessoais.</p>
+
+    <p><strong>CLÁUSULA IX</strong> - Cabe ao estudante/estagiário cumprir a programação estabelecida, observando as normas internas da Instituição de Ensino e da Unidade Concedente, bem como elaborar relatório referente ao estágio, quando solicitado pelas partes.</p>
+
+    <p><strong>CLÁUSULA X</strong> - O estudante/estagiário ou seu responsável responderão pelas perdas e danos decorrentes da inobservância das normas internas ou das constantes neste Termo de Compromisso de Estágio.</p>
+
+    <p><strong>CLÁUSULA XI</strong> - Este Termo de Compromisso de Estágio terá vigência durante a realização do estágio no período descrito na Cláusula VII, podendo ser denunciado a qualquer tempo, unilateralmente, mediante comunicado escrito com antecedência de 5 (cinco) dias.</p>
+
+    <p><strong>CLÁUSULA XII</strong> - Constituem motivos para a interrupção automática do presente Termo:<br>
+      a) a conclusão ou abandono do curso; b) a pedido da Instância Colaboradora; c) a pedido formal do estudante/estagiário; d) o não cumprimento do estabelecido neste instrumento; e) a pedido do IFSP.</p>
+
+    <p><strong>CLÁUSULA XIII</strong> - A Instituição de Ensino se compromete a assinar os relatórios e documentos comprobatórios utilizados pelo estudante/estagiário durante o estágio.</p>
+
+    <p><strong>CLÁUSULA XIV</strong> - O Instituto Federal de Educação, Ciência e Tecnologia de São Paulo poderá, alternativamente, se responsabilizar pela contratação de seguro contra acidentes pessoais, conforme previsto no Parágrafo único do Art. 9º da Lei 11.788, em nome do estudante/estagiário de Licenciatura, durante a realização do estágio obrigatório. Esse compromisso é regulado por portaria interna (Regulamento de Estágio do IFSP) vigente desde maio de 2011.</p>
+
+    <p><strong>CLÁUSULA XV</strong> - Fica eleito o Foro da Seção Judiciária de São Paulo da Justiça Federal da 3ª Região com renúncia de qualquer outro por mais privilegiado que seja, para dirimir quaisquer dúvidas que se originarem deste Termo de Compromisso de Estágio e que não possam ser solucionadas amigavelmente.</p>
+
+    <p><strong>CLÁUSULA XVI</strong> - Em consonância ao disposto na Instrução Normativa 02/2021 - PRX/IFSP, assim que atingida a data prevista para o encerramento do estágio, tal como descrita na Cláusula VII – deste documento –, o(a) estagiário(a) terá, no máximo, 30 (trinta) dias corridos para concluir a entrega do relatório final, bem como de toda a documentação relacionada à finalização do estágio. Evidenciado que esta etapa não foi cumprida no prazo estabelecido, a Coordenação de Extensão e/ou Coordenação de Estágio rescindirá o presente Termo de Compromisso. Nesse caso, sob nenhuma hipótese, o(a) estudante terá o cômputo de qualquer carga horária desenvolvida no estágio.</p>
+
+    <p><strong>CLÁUSULA XVII</strong> - Não obstante reúna-se a assinatura de todas as partes envolvidas nesta celebração, a eficácia jurídica e a consequente produção de seus efeitos legais ficam condicionadas ao prévio cadastramento deste Termo de Compromisso de Estágio no Sistema Unificado de Administração Pública [SUAP-IFSP], a ser realizado pela Coordenadoria de Extensão do Instituto Federal de São Paulo, Campus Sorocaba. Considera-se, portanto, para todos os fins de direito, o referido cadastramento enquanto ato administrativo indispensável à legalidade, à cobertura institucional, à autorização, à efetivação e à validação de quaisquer atividades desenvolvidas pelo(a) aluno(a) no âmbito do estágio.</p>
+
+    <p>E, por estarem de acordo com as condições deste Termo, as partes o assinam em três vias de igual teor e forma, para que surta seus efeitos legais.</p>
+
+    <p>Sorocaba, <span data-out="diaDocumento">[preencher dia]</span> de <span data-out="mesDocumento">[preencher mês]</span> de <span data-out="anoDocumento">[preencher ano]</span>.</p>
+
+    <h3>ASSINATURAS</h3>
+
+    <div class="assinaturas">
+      <div>_______________________________________<br><span data-out="supervisor">Supervisor(a)</span><br>Supervisor(a) da Unidade Concedente</div>
+      <div>_______________________________________<br><span data-out="representante">Representante Legal</span><br>Representante Legal da Unidade Concedente</div>
+      <div>_______________________________________<br><span data-out="nomeEstudante">Estudante/Estagiário(a)</span><br>Estudante/Estagiário(a)</div>
+      <div>_______________________________________<br><span data-out="orientador">Orientador(a)</span><br>Orientador(a) de estágio</div>
+      <div>_______________________________________<br>Denilson Camargo Mirim<br>Diretor Geral do IFSP - Câmpus Sorocaba</div>
+      <div>_______________________________________<br><span data-out="coordenadorCurso">Coordenador(a) do Curso</span><br>Coordenador(a) do Curso</div>
+      <div>_______________________________________<br><span data-out="responsavelEstagios">Responsável pelo setor que cuida dos Estágios no campus</span><br>Responsável pelo setor que cuida dos Estágios no campus</div>
+      <div>_______________________________________<br><span data-out="coordenadorInstitucional">Coordenador(a) Institucional de Estágios</span><br>Coordenador(a) Institucional de Estágios</div>
+    </div>
+
+    <p class="nota-final">Documento assinado eletronicamente Conforme Art. 6º, Inciso - I, do Regulamento de Estágio – Portaria 1.204, de 11/05/2011</p>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
