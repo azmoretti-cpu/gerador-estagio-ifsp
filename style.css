@@ -81,7 +81,7 @@ label {
   font-size: 13px;
 }
 
-input, select {
+input, select, textarea {
   width: 100%;
   padding: 9px;
   margin-top: 4px;
@@ -246,5 +246,47 @@ button.secundario {
   .documento {
     width: 100%;
     padding: 24px;
+  }
+}
+
+
+.titulo-plano {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 13pt;
+}
+
+.tabela-plano {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.tabela-plano th,
+.tabela-plano td {
+  border: 1px solid #000;
+  padding: 8px;
+  vertical-align: top;
+}
+
+.tabela-plano th {
+  text-align: center;
+  background: #efefef;
+}
+
+.tabela-plano .texto-longo {
+  text-align: justify;
+  white-space: pre-line;
+}
+
+.quebra-pagina {
+  break-before: page;
+  page-break-before: always;
+  margin-top: 30px;
+}
+
+@media print {
+  .quebra-pagina {
+    page-break-before: always;
   }
 }

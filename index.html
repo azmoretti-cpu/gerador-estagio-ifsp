@@ -172,6 +172,51 @@
       <input id="horaFim" required placeholder="00:00" maxlength="5" data-mask="hora" />
     </fieldset>
 
+
+    <fieldset>
+      <legend>Plano de Atividades</legend>
+
+      <label>Estágio em *</label>
+      <select id="estagioEm" required>
+        <option value="">Selecione</option>
+        <option value="Educação Infantil">Educação Infantil</option>
+        <option value="Anos Iniciais do Ensino Fundamental">Anos Iniciais do Ensino Fundamental</option>
+        <option value="Gestão">Gestão</option>
+        <option value="Espaços não Escolares">Espaços não Escolares</option>
+        <option value="Mulheres Mil">Mulheres Mil</option>
+        <option value="LAPED">LAPED</option>
+        <option value="NAPNE">NAPNE</option>
+        <option value="Biblioteca">Biblioteca</option>
+        <option value="Laboratório de Tecnologia Assistiva">Laboratório de Tecnologia Assistiva</option>
+        <option value="Outros">Outros</option>
+      </select>
+
+      <label>Outro campo de estágio, se necessário</label>
+      <input id="estagioEmOutro" placeholder="Preencha apenas se escolher Outros" />
+
+      <label>Período do curso / semestre *</label>
+      <select id="periodoCursoPlano" required>
+        <option value="">Selecione</option>
+        <option value="1º semestre">1º semestre</option>
+        <option value="2º semestre">2º semestre</option>
+        <option value="3º semestre">3º semestre</option>
+        <option value="4º semestre">4º semestre</option>
+        <option value="5º semestre">5º semestre</option>
+        <option value="6º semestre">6º semestre</option>
+        <option value="7º semestre">7º semestre</option>
+        <option value="8º semestre">8º semestre</option>
+      </select>
+
+      <label>Carga horária *</label>
+      <input id="cargaHoraria" required placeholder="110h" />
+
+      <label>Síntese das atividades a serem desenvolvidas *</label>
+      <textarea id="sinteseAtividades" rows="8" required placeholder="Descreva as atividades previstas"></textarea>
+
+      <label>Total da carga horária desta folha *</label>
+      <input id="totalCargaHoraria" required placeholder="110 horas" />
+    </fieldset>
+
     <fieldset>
       <legend>Data do documento</legend>
 
