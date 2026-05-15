@@ -24,7 +24,16 @@ body {
 .topo p {
   margin: 0;
 }
-
+textarea {
+  width: 100%;
+  padding: 9px;
+  margin-top: 4px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  resize: vertical;
+}
 .container {
   display: grid;
   grid-template-columns: 390px 1fr;
